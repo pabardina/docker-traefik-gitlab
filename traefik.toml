@@ -1,0 +1,38 @@
+# traefik.toml
+################################################################
+# Global configuration
+################################################################
+
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+    [entryPoints.http.redirect]
+    entryPoint = "https"
+  [entryPoints.https]
+  address = ":443"
+    [entryPoints.https.tls]
+
+defaultEntryPoints = ["http", "https"]
+
+[acme]
+email = "xxx@xx.com"
+storageFile = "/etc/traefik/acme/acme.json"
+entryPoint = "https"
+OnHostRule = true
+onDemand = true
+
+[[acme.domains]]
+  main = "toto.bardina.net"
+  sans = ["test.bardina.net", "traefik.bardina.net"]
+
+[web]
+address = ":8080"
+[web.auth.basic]
+  users = ["toto:$apr1$8PAEA.DE$a9wK4YsDZOAVlnD4.CvpU/"]
+
+[docker]
+endpoint = "unix:///var/run/docker.sock"
+domain = "bardina.net"
+watch = true
+exposedbydefault = true
+
