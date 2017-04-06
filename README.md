@@ -1,5 +1,7 @@
 # docker-traefik-gitlab
 
+Based on https://github.com/sameersbn/docker-gitlab for gitlab' stack
+
 ## Config
 
 * Edit traefik.yml 
