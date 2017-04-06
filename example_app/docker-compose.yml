@@ -1,0 +1,21 @@
+on: '2'
+
+networks:
+  testnetwork:
+    driver: bridge
+  traefik:
+    external:
+      name: traefik_default
+
+services:
+  azerty:
+    image: pabardina/gohostname
+    networks:
+      - testnetwork
+      - traefik
+    labels:
+      - "traefik.frontend.rule=Host:another.domain.net"
+      - "traefik.port=8000"
+      - "traefik.backend=example"
+      - "traefik.frontend.entryPoints=http,https"
+      - "traefik.docker.network=traefik_default"
