@@ -38,6 +38,7 @@ services:
     - "10022:22"
     networks:
       - gitlab
+      - traefik
     volumes:
     - /srv/docker/gitlab/gitlab:/home/git/data:Z
     environment:
@@ -165,5 +166,7 @@ services:
 
 networks:
   gitlab:
+    driver: bridge
+  traefik:
     external:
       name: traefik_default
