@@ -25,14 +25,19 @@ onDemand = true
   main = "toto.bardina.net"
   sans = ["test.bardina.net", "traefik.bardina.net"]
 
+[[acme.domains]]
+  main = "cab.re"
+  sans = ["gitlab.cab.re", "portainer.cab.re", "traefik.cab.re", "test.cab.re", "example.cab.re"]
+
+
 [web]
 address = ":8080"
 [web.auth.basic]
-  users = ["toto:$apr1$8PAEA.DE$a9wK4YsDZOAVlnD4.CvpU/"]
+  users = ["pab:$apr1$2ZtdZCue$BHq00nxavh6EFmR9OFAfZ1"]
 
 [docker]
 endpoint = "unix:///var/run/docker.sock"
-domain = "bardina.net"
+domain = "cab.re"
 watch = true
 exposedbydefault = true
 

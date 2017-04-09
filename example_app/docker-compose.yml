@@ -14,7 +14,7 @@ services:
       - testnetwork
       - traefik
     labels:
-      - "traefik.frontend.rule=Host:another.domain.net"
+      - "traefik.frontend.rule=Host:test.bardina.net"
       - "traefik.port=8000"
       - "traefik.backend=example"
       - "traefik.frontend.entryPoints=http,https"

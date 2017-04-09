@@ -15,7 +15,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     restart: unless-stopped
     labels:
-      - "traefik.frontend.rule=Host:traefik.bardina.net"
+      - "traefik.frontend.rule=Host:traefik.cab.re"
       - "traefik.port=8080"
       - "traefik.backend=traefik"
       - "traefik.frontend.entryPoints=http,https"
@@ -23,7 +23,7 @@ services:
   portainer:
     image: portainer/portainer
     labels:
-      - "traefik.frontend.rule=Host:test.bardina.net"
+      - "traefik.frontend.rule=Host:portainer.cab.re"
       - "traefik.port=9000"
       - "traefik.backend=portainer"
       - "traefik.frontend.entryPoints=http,https"
