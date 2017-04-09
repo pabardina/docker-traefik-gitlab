@@ -5,7 +5,7 @@ networks:
     driver: bridge
   traefik:
     external:
-      name: traefik_default
+      name: traefik
 
 services:
   example:
@@ -18,4 +18,4 @@ services:
       - "traefik.port=8000"
       - "traefik.backend=example"
       - "traefik.frontend.entryPoints=http,https"
-      - "traefik.docker.network=traefik_default"
+      - "traefik.docker.network=traefik"

@@ -60,7 +60,7 @@ services:
     - GITLAB_HTTPS=true
     - SSL_SELF_SIGNED=false
 
-    - GITLAB_HOST=toto.bardina.net
+    - GITLAB_HOST=gitlab.cab.re
     - GITLAB_PORT=10080
     - GITLAB_SSH_PORT=10022
     - GITLAB_RELATIVE_URL_ROOT=
@@ -163,11 +163,11 @@ services:
       - "traefik.port=80"
       - "traefik.backend=gitlab"
       - "traefik.frontend.entryPoints=http,https"
-      - "traefik.docker.network=traefik_default"
+      - "traefik.docker.network=traefik"
 
 networks:
   gitlab:
     driver: bridge
   traefik:
     external:
-      name: traefik_default
+      name: traefik

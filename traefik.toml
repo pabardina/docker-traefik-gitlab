@@ -16,19 +16,15 @@ defaultEntryPoints = ["http", "https"]
     [entryPoints.https.tls]
 
 [acme]
-email = "xxx@xx.com"
+email = "xx@xx.com"
 storageFile = "/etc/traefik/acme/acme.json"
 entryPoint = "https"
 OnHostRule = true
 onDemand = true
 
 [[acme.domains]]
-  main = "toto.bardina.net"
-  sans = ["test.bardina.net", "traefik.bardina.net"]
-
-[[acme.domains]]
   main = "cab.re"
-  sans = ["gitlab.cab.re", "portainer.cab.re", "traefik.cab.re", "test.cab.re", "example.cab.re"]
+  sans = ["test.bardina.net"] 
 
 
 [web]
