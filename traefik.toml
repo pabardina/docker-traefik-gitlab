@@ -24,8 +24,10 @@ onDemand = true
 
 [[acme.domains]]
   main = "cab.re"
-  sans = ["test.bardina.net"] 
+  sans = ["portainer.cab.re", "traefik.cab.re", "gitlab.cab.re"] 
 
+[[acme.domains]]
+  main = "test.cab.re"
 
 [web]
 address = ":8080"
