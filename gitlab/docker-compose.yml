@@ -61,7 +61,7 @@ services:
     - SSL_SELF_SIGNED=false
 
     - GITLAB_HOST=gitlab.cab.re
-    - GITLAB_PORT=10080
+    - GITLAB_PORT=
     - GITLAB_SSH_PORT=10022
     - GITLAB_RELATIVE_URL_ROOT=
     - GITLAB_SECRETS_DB_KEY_BASE=long-and-random-alphanumeric-string
