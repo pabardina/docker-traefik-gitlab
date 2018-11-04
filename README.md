@@ -4,7 +4,7 @@ Based on https://github.com/sameersbn/docker-gitlab for gitlab' stack
 
 ## Config
 
-* Edit traefik.yml 
+* Edit traefik.toml
 * Edit docker-compose.yml
 * Edit gitlab/docker-compose.yml
 
